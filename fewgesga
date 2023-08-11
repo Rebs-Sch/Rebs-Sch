@@ -1,0 +1,61 @@
+programa
+{
+
+cadeia convidados[100]
+cadeia convidado
+cadeia remocao
+inteiro escolher
+logico repeticao = verdadeiro
+
+	funcao inicio()
+{
+
+		enquanto(repeticao == verdadeiro){
+		escreva("(           MENU          )\n")
+		escreva("([1] - Adicionar convidado)\n")
+		escreva("([2] - Listar convidados  )\n")
+		escreva("([3] - Remover convidado  )\n")
+		escreva("([0] - Sair               )\n")
+		leia(escolher)
+
+		 escolha(escolher){
+		 	caso 1: 
+		 	cadastrar()
+		 	pare
+		 	caso 2:
+		 	listar()
+		 	pare
+		 	caso 3:
+		 	remover()
+		 	pare
+		 	caso 0:
+		 	repeticao = falso
+		 	pare}}
+}
+
+	funcao cadastrar(){
+		escreva ("Diga o nome de determinado convidado: ")
+		leia(convidado)
+		
+		para (inteiro i = 0; i < 100; i ++){
+			
+			se(convidados[i] == "" e convidados[i] == "vazio"){
+			
+				convidados[i] = convidado
+			pare}}}
+			
+	funcao listar(){
+		para (inteiro i = 0; i < 100; i++){
+			se (convidados[i] != "" ou convidados[i] != "vazio"){
+				escreva(convidados[i],"\n")}
+			senao{pare}}}
+
+	funcao remover(){
+		escreva ("Informe qual convidado você deseja remover: ")
+		leia(remocao)
+
+		para(inteiro i = 0; i < 100; i++){
+			se (convidados[i] == remocao){
+				convidados[i] = "vazio"
+				pare}}}
+}
